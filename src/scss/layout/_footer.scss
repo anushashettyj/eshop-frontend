@@ -1,0 +1,97 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.footer {
+    @include flex-center;
+    padding: 20px;
+    background-color: $color-11;
+    color: $color-black;
+    .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        a {
+            color: $color-black;
+        }
+        h1 {
+            
+        }
+        p {
+
+        }
+        .social-container {
+            display: flex;
+
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                color: $color-8;
+                @include flex-center;
+                justify-content: center;
+                margin-right: 0.5rem;
+                cursor: pointer;
+                &.fb {
+                    background-color: $color-fb;
+                }
+                &.twitter {
+                    background-color: $color-twitter;
+                }
+                &.insta {
+                    background-color: $color-insta;
+                }
+            }
+        }
+    }
+    .center {
+        flex: 1;
+        padding: 20px;
+
+        h3 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .list-container {
+            @include flex-center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .list-icon {
+                width: 40%;
+                padding: 5px;
+                @include flex-center;
+                justify-content: center;
+                cursor: pointer;
+
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        padding: 20px;
+
+        h3 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .pay-container {
+            @include flex-center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .pay-icon {
+                padding: 10px;
+                @include flex-center;
+                justify-content: center;
+
+                img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+    
+}

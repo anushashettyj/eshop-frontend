@@ -1,0 +1,68 @@
+@import './variables';
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+}
+
+@mixin sibling-overlap-top-left {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+@mixin section-header-base {
+	text-align: center;
+	color: $color-3;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+@mixin select-base {
+	padding: 10px;
+	margin-right: 20px;
+}
+
+@mixin form-container-base {
+	width: 100%;
+	height: 65vh;
+	@include flex-center;
+	justify-content: center;
+}
+
+@mixin form-wrapper-base ($width) {
+	width: $width;
+  max-width: 530px;
+	padding: 20px;
+  background-color: $color-7;
+}
+
+@mixin form-header-base {
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+}
+
+@mixin inline-form-base {
+	@include flex-center; 
+  flex-wrap: wrap;
+}
+
+@mixin vertical-form-base {
+	@include flex-center; 
+	flex-direction: column;
+}
+
+@mixin form-input ($min-width) {
+	flex: 1;
+	min-width: $min-width;
+	margin: 20px 10px 0 0;
+	padding: 10px;
+}
+
+@mixin container($width, $height) {
+	width: $width;
+	height: $height;
+}

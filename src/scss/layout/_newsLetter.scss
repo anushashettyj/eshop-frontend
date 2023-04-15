@@ -1,0 +1,43 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.newsLetter {
+    height:50vh;
+    @include flex-center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color-7;
+    padding-bottom: 20px;
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        color: $color-9;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+        color: $color-10;
+    }
+    .email-container {
+        width: 50%;
+        height: 40px;
+        padding: 0 5px 0 5px;
+        background-color: $color-8;
+        @include flex-center;
+        justify-content: center;
+        border: 2px solid $color-9;
+        input {
+            border: none;
+            flex: 8;
+        }
+        button {
+            flex: 1;
+            border: none;
+            color: $color-8;
+            background-color: $color-3;
+            cursor: pointer;
+        }
+    }
+}

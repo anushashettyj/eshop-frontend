@@ -1,0 +1,80 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.inline-form {
+	@include form-container-base;
+
+	.wrapper {
+		@include form-wrapper-base(50%);
+			
+		h1 {
+			@include form-header-base;
+		}
+
+		form {
+			@include inline-form-base;
+
+			input {
+				@include form-input(40%);
+			}
+
+			.terms {
+				@extend .terms;
+			}
+
+			button {
+				@extend .form-button1;
+			}
+		}
+
+	}
+		
+}
+
+.terms {
+	width: 100%;
+	font-size: 12px;
+	margin: 20px 0 0 0;
+
+	input {
+		min-width: 15px;
+	}
+}
+
+.block-form {
+	@include form-container-base;
+
+	.wrapper {
+		@include form-wrapper-base(40%);
+			
+		h1 {
+			@include form-header-base;
+		}
+
+		form {
+			@include vertical-form-base;
+
+			input {
+				@include form-input(80%);
+			}
+
+			.terms {
+				@extend .terms;
+			}
+
+			button {
+				@extend .form-button1;
+			}
+
+			a {
+				@extend .form-link-base;
+			}
+		}
+
+	}
+		
+}
+
+.form-error {
+	color: $color-12;
+}

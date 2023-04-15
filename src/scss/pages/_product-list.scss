@@ -1,0 +1,24 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.product-list {
+  
+  h1 {
+    margin: 20px;
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    
+    .filter {
+      margin: 20px;
+
+      span {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-right: 20px;
+      }
+    }
+  }
+}

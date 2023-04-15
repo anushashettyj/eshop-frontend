@@ -1,0 +1,6 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.section-header {
+    @include section-header-base;
+}

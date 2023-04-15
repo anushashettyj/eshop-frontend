@@ -1,0 +1,15 @@
+@import '../abstracts/variables';
+
+a {
+  text-decoration: none;
+}
+
+.form-link-base {
+  margin: 5px 0;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
