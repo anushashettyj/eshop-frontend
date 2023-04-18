@@ -1,5 +1,25 @@
 <!-- GETTING STARTED -->
 <a name="readme-top"></a>
+This ecommerce website is created using React, NodeJS, Express.js, MongoDB and SCSS.
+
+## Demo
+
+https://user-images.githubusercontent.com/130799659/232907545-0a9afbf6-85ac-4048-868d-a25cbe748877.mp4
+
+
+https://user-images.githubusercontent.com/130799659/232907195-37cc1d6c-97d0-48e6-8e18-82a3508e9359.mp4
+
+
+
+https://user-images.githubusercontent.com/130799659/232907370-74b3a3d9-6b34-4a55-a955-601f5c471f8b.mp4
+
+
+
+https://user-images.githubusercontent.com/130799659/232907415-21e53519-d446-4bcf-869d-71b29e307168.mp4
+
+
+
+
 ## Getting Started
 
 Set up this project locally and get it up and running by following these steps.
