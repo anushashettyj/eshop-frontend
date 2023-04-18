@@ -13,11 +13,18 @@
 	left: 0;
 }
 
-@mixin section-header-base {
+@mixin section-header-base1 {
 	text-align: center;
 	color: $color-3;
 	font-size: 3rem;
 	font-weight: bold;
+}
+
+@mixin section-header-base2 {
+	margin-top: 50px;
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	color: #116f9d;
 }
 
 @mixin select-base {
@@ -65,4 +72,8 @@
 @mixin container($width, $height) {
 	width: $width;
 	height: $height;
+}
+
+@mixin product-color-base {
+	border: 1px solid #cacae9;
 }

@@ -1,19 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
 // import { products } from '../../src/data';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeProduct } from '../redux/cart';
+
 const Cart = () => {
   const cart = useSelector(state => state.cart);
-  console.log(cart.products);
+  const dispatch = useDispatch();
+
+  const handleDeleteItem = (cartId) => {
+    dispatch(removeProduct(cartId));
+  };
+
   return (
     <div className="cart">
       <div className="cart-wrapper">
         <h1> YOUR CART </h1>
         <div className="top">
-          <button> CONTINUE SHOPPING</button>
+          <Link to='/products/all' > <button> CONTINUE SHOPPING</button> </Link>
           <div className="top-texts">
-            <span className="top-text">Shopping cart(2)</span>
+            <span className="top-text">Shopping cart({cart.quantity})</span>
             <span className="top-text">Whishlist(0)</span>
           </div>
           <button className="button-filled"> CHECKOUT</button>
@@ -40,6 +49,9 @@ const Cart = () => {
                         <RemoveIcon />
                       </div>
                       <div className="product-price">$ {product.quantity * product.price}</div>
+                    </div>
+                    <div className="cart-item-action">
+                      <DeleteIcon onClick={() => handleDeleteItem(product.cartId)} className="remove-cart-item" />
                     </div>
                   </div>
                   <hr />

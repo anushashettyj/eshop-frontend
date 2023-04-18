@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import uuid from 'uuid';
 import NewsLetter from '../components/NewsLetter';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -10,18 +11,19 @@ import { publicRequest } from '../../src/requestProcessor';
 
 const Product = () => {
   const id = useLocation().pathname.split('/')[3];
-  console.log({id});
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   useEffect(() => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get('/product/find/' + id);
-        console.log({res})
         setProduct(res.data);
         setColor(res.data.color[0])
         setSize(res.data.size[0])
@@ -41,7 +43,7 @@ const Product = () => {
   }
 
   const handleAddtoCart = () => { 
-    dispatch(addProduct({...product, quantity, size: size || product.size[0], color: color || product.color[0]}))
+    dispatch(addProduct({...product, cartId: uuid.v4(), quantity, size: size || product.size[0], color: color || product.color[0]}))
   };
 
   return (
@@ -55,13 +57,13 @@ const Product = () => {
           <p>
             {product.desc}
           </p>
-          <span className="price">$ {product.price}</span>
+          <span className="price">${product.price} CAD</span>
           <div className="filter-container">
             <div className="filter">
               <span className="filter-title">Color</span>
               {product.color && product.color.map((color, idx) => (
                 <div className="filter-color" 
-                  style={{backgroundColor: `${color}`}} 
+                  style={{backgroundColor: `${color}`, border: '1px solid #cacae9'}} 
                   key={idx} 
                   onClick={() => setColor(color)}/>
               ))}

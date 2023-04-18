@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    console.log('userExist--', userExist);
   };
 
   return (

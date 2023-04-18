@@ -5,7 +5,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
 const Product = ({item}) => {
-  console.log('---product--', item)
   return (
     <div className="product">
       <div className="circle"></div>
@@ -22,6 +21,9 @@ const Product = ({item}) => {
         <div className="icon">
           <FavoriteBorderOutlinedIcon />
         </div>
+      </div>
+      <div className="price">
+        ${item.price} CAD
       </div>
     </div>
   )

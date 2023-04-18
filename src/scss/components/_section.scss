@@ -1,6 +1,28 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-.section-header {
-    @include section-header-base;
+.section1 {
+    @include section-header-base1;
+}
+
+.section-header1 {
+    text-align: center;
+    h1 {
+        @include section-header-base2;
+    }
+    button {
+        @extend .section-button1;
+    }
+}
+
+.section2 {
+    text-align: center;
+    .section-header {
+        h1 {
+            @include section-header-base2;
+        }
+        button {
+            @extend .section-button1;
+        }
+    }
 }

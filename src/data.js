@@ -28,24 +28,24 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "assets/categories/cat1.jpg",
-    title: "SHIRT STYLES",
-    alt: "shirts",
-    cat: "women"
+    img: "assets/categories/bag.jpg",
+    title: "BAGS",
+    alt: "bags",
+    cat: "bags"
   },
   {
     id: 2,
-    img: "assets/categories/cat2.jpg",
-    title: "LOUNGE WEAR",
-    alt: "lounge_wear",
-    cat: "dress"
+    img: "assets/categories/shoes.jpg",
+    title: "SHOES",
+    alt: "shoes",
+    cat: "shoes"
   },
   {
     id: 3,
     img: "assets/categories/cat3.jpg",
-    title: "LIGHT JACKETS",
-    alt: "jackets",
-    cat: "tshirt"
+    title: "CLOTHING",
+    alt: "clothing",
+    cat: "clothing"
   }
 ]
 
@@ -108,4 +108,55 @@ export const payments = [
     img: "assets/paymethod/pay6.png",
     alt: "pay6"
   }
+];
+
+export const sizeList = [
+  'xxxs',
+  'xxs',
+  'xs',
+  's',
+  'md',
+  'lg',
+  'xl',
+  'xxl',
+  'xxxl'
+];
+
+export const colorList = [
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'purple',
+  'pink',
+  'brown',
+  'black',
+  'grey',
+  '#6f4b34',
+  'white',
+  'gold'
+];
+
+export const categoryList = [
+  'men',
+  'women',
+  'casuals',
+  'formals',
+  'partywear',
+  'shoes',
+  'bags',
+  'clothing',
+  'tshirt',
+  'hoodies',
+  'pants',
+  'sandals',
+  'sweaters',
+  'boots',
+  'hiking',
+  'sneakers',
+  'flats',
+  'heels',
+  'featured',
+  'bestsellers'
 ];

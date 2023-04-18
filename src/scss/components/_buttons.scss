@@ -14,3 +14,15 @@
     cursor: not-allowed;
   }
 }
+
+.section-button1 {
+  border: none;
+  padding: 10px;
+  background-color: $color-13;
+  color: $color-8;
+  cursor: pointer;
+  font-weight: 600;
+  &:hover {
+    background-color: $color-10;
+  }
+}

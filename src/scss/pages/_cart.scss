@@ -78,6 +78,7 @@
 								width: 20px;
 								height: 20px;
 								border-radius: 50%;
+								@include product-color-base;
 							}
 							.product-size {
 								
@@ -104,6 +105,16 @@
 						.product-price {
 							font-size: 30px;
 							font-weight: 200;
+						}
+					}
+					.cart-item-action {
+						padding-top: 1rem;
+						padding-right: 2rem;
+						.remove-cart-item {
+							&:hover {
+								cursor: pointer;
+								color: red;
+							}
 						}
 					}
 				}

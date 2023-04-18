@@ -10,8 +10,12 @@ import Product from './pages/Product';
 import ProductList from './pages/ProductList';
 import './scss/main.scss';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
   const userExist = useSelector(state => state.user.currentUser);
   console.log({userExist});
   return (

@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Slider />
       <Categories />
-      <Products />
+      <Products cat='featured'/>
       <NewsLetter />
     </div>
   )
